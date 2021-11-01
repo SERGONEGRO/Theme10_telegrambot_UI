@@ -28,12 +28,13 @@ namespace Example_1042
 
             client = new TelegramMessageClient(this);
 
-            logList.ItemsSource = client.BotMessageLog;
+            logList.ItemsSource = TelegramMessageClient.BotMessageLog; //client.BotMessageLog;
         }
 
         private void btnMsgSendClick(object sender, RoutedEventArgs e)
         {
             client.SendMessage(txtMsgSend.Text, TargetSend.Text);
+            txtMsgSend.Text = null;
         }
     }
 }

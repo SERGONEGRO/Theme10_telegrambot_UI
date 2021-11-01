@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:Example_1042"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="192*"/>
+            <RowDefinition Height="227*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -15,11 +19,15 @@
 
 
         <ListBox x:Name="logList" 
+                 
                  Grid.Column="0"
                  HorizontalAlignment="Stretch" 
                  Margin="5" 
-                 VerticalAlignment="Stretch" 
+                 VerticalAlignment="Stretch" Grid.RowSpan="2" Background="#FFB49C9C" 
                  >
+            <ListBox.BindingGroup>
+                <BindingGroup/>
+            </ListBox.BindingGroup>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" Margin="5" BorderThickness="1" CornerRadius="10">
@@ -38,16 +46,24 @@
                   Header="Отправка сообщения"
                   HorizontalAlignment="Stretch" 
                   Margin="5"
-                  VerticalAlignment="Stretch" 
+                  VerticalAlignment="Stretch" Grid.RowSpan="2" 
                   >
-            <StackPanel>
+            <StackPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+                <StackPanel.BindingGroup>
+                    <BindingGroup/>
+                </StackPanel.BindingGroup>
                 <TextBlock x:Name="TargetSend" 
+                           
                            Text="{Binding ElementName=logList, Path=SelectedItem.Id}"
-                           Visibility="Collapsed"
-                           Margin="5"/>
-                
+                           Visibility="Visible"
+                           Margin="5">
+                    <TextBlock.Background>
+                        <ImageBrush/>
+                    </TextBlock.Background>
+                </TextBlock>
+
                 <TextBox x:Name="txtMsgSend" FontSize="20" Margin="5"/>
-                
+
                 <Button x:Name="btnMsgSend" FontSize="20" Content="Отправить" Margin="5" Click="btnMsgSendClick"/>
             </StackPanel>
         </GroupBox>
