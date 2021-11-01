@@ -1,0 +1,22 @@
+﻿<Window x:Class="Example_1021.WindowStackPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Example_1021"
+        mc:Ignorable="d"
+        Title="StackPanel" Height="550" Width="800">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Background="Aqua" Text="Margin = &quot;10&quot;" Height="100" Margin="10"/>
+        <TextBlock Background="Aqua" Text="Margin = &quot;10, 20&quot;" Height="100" Margin="10, 20"/>
+        <TextBlock Background="Aqua" Text="Margin = &quot;10, 20, 30, 40&quot;" Height="100" Margin="10, 20, 30, 40"/>
+        <TextBlock Background="Aqua" Text="Margin = &quot;0&quot;" Height="100" Margin="0"/>
+    </StackPanel>
+
+    <!--<StackPanel Orientation="Horizontal">
+        <TextBlock Background="Aqua" Text="Margin = &quot;10&quot;" Width="150" Margin="10"/>
+        <TextBlock Background="Aqua" Text="Margin = &quot;10, 20&quot;" Width="150" Margin="10, 20"/>
+        <TextBlock Background="Aqua" Text="Margin = &quot;10, 20, 30, 40&quot;" Width="150" Margin="10, 20, 30, 40"/>
+        <TextBlock Background="Aqua" Text="Margin = &quot;0&quot;" Width="150" Margin="0"/>
+    </StackPanel>-->
+</Window>

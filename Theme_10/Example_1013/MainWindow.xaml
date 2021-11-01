@@ -1,0 +1,45 @@
+﻿<Window x:Class="Example_1013.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Example_1013"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="700" WindowStartupLocation="CenterScreen">
+    <Canvas x:Name="canva">
+
+        <TextBlock x:Name="txtQueston"
+                   Canvas.Left="200" 
+                   Canvas.Top="100"
+                   FontSize="20"
+                   Width="300"
+                   Background="Beige"
+                   TextAlignment="Center"
+                   Text="Познакомился ли ты с C#?" 
+        />
+
+        <TextBlock x:Name="txtYes"
+                   Canvas.Left="200" 
+                   Canvas.Top="200"
+                   FontSize="20"
+                   TextWrapping="Wrap"
+                   Text="Да" 
+                   Width="100"
+                   Background="Beige"
+                   TextAlignment="Center"
+                   MouseDown="TxtYes_MouseDown"
+                   />
+
+        <TextBlock x:Name="txtNo"
+                   Canvas.Left="400" 
+                   Canvas.Top="200"
+                   FontSize="20"
+                   TextWrapping="Wrap"
+                   Text="Нет" 
+                   Width="100"
+                   Background="Beige"
+                   TextAlignment="Center"
+                   MouseEnter="TxtNo_MouseEnter"
+                   />
+    </Canvas>
+</Window>
