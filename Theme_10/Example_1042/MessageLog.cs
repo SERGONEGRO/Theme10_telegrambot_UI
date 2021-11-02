@@ -1,4 +1,7 @@
-﻿namespace Example_1042
+﻿using Newtonsoft.Json.Linq;
+using System;
+
+namespace Example_1042
 {
     struct MessageLog
     {
@@ -16,6 +19,18 @@
             this.Msg = Msg;
             this.FirstName = FirstName;
             this.Id = Id;
+        }
+
+        internal JObject SerializeMessageLogToJson()
+        {
+            JObject jMessageLog = new JObject
+            {
+                ["ID"] = this.Id,
+                ["TIME"] = this.Time,
+                ["NAME"] = this.FirstName,
+                ["MESSAGE"] = this.Msg
+            };
+            return jMessageLog;
         }
 
         //public override string ToString()

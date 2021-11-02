@@ -65,6 +65,7 @@
                 <TextBox x:Name="txtMsgSend" FontSize="20" Margin="5"/>
 
                 <Button x:Name="btnMsgSend" FontSize="20" Content="Отправить" Margin="5" Click="btnMsgSendClick"/>
+                <Button x:Name="btnSaveToJson" Content="Сохранить переписку в JSON" Margin="5" Click="btnSaveToJsonClick"/>
             </StackPanel>
         </GroupBox>
     </Grid>
