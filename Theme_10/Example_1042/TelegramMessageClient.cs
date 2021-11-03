@@ -9,6 +9,7 @@ using Telegram.Bot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using System.Windows;
 
 namespace Example_1042
 {
@@ -46,7 +47,7 @@ namespace Example_1042
             });
         }
 
-        public TelegramMessageClient(MainWindow W, string PathToken = @"D:\programms\Яндекс диск\Синхронизация\YandexDisk\token1.txt")
+        public TelegramMessageClient(MainWindow W, string PathToken = @"C:\Users\User\YandexDisk\token1.txt")
         {
             this.BotMessageLog = new ObservableCollection<MessageLog>();
             this.w = W;
