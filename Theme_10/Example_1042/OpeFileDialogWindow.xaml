@@ -1,0 +1,15 @@
+﻿<Window x:Class="Theme10_TelegramBot_UI.OpenFileDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Theme10_TelegramBot_UI"
+        mc:Ignorable="d"
+        Title="Выберите текстовый файл с токеном:" Height="100" Width="300">
+    <DockPanel Margin="10">
+        <WrapPanel HorizontalAlignment="Center" DockPanel.Dock="Top" Margin="0,0,0,10">
+            <Button Name="btnOpenFile" Click="btnOpenFile_Click" Height="40" Width="273">Open File</Button>
+        </WrapPanel>
+        
+    </DockPanel>
+</Window>

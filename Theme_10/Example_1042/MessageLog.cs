@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 
-namespace Example_1042
+namespace Theme10_TelegramBot_UI
 {
     struct MessageLog
     {
@@ -32,10 +32,5 @@ namespace Example_1042
             };
             return jMessageLog;
         }
-
-        //public override string ToString()
-        //{
-        //    return $"{Time} {Msg} {FirstName}";
-        //}
     }
 }

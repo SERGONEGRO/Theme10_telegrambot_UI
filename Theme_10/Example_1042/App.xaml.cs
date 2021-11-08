@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Example_1042
+namespace Theme10_TelegramBot_UI
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

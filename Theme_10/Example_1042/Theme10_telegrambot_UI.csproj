@@ -67,8 +67,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="OpenFileDialog.xaml.cs">
-      <DependentUpon>OpenFileDialog.xaml</DependentUpon>
+    <Compile Include="OpeFileDialogWindow.xaml.cs">
+      <DependentUpon>OpeFileDialogWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelegramMessageClient.cs" />
     <Page Include="MainWindow.xaml">
@@ -83,7 +83,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="OpenFileDialog.xaml">
+    <Page Include="OpeFileDialogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,11 +116,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Screenshot_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="w\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

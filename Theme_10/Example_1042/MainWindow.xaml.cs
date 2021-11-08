@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json.Linq;
 
-namespace Example_1042
+namespace Theme10_TelegramBot_UI
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,15 +23,17 @@ namespace Example_1042
     public partial class MainWindow : Window
     {
         TelegramMessageClient client;
+        public string Token { get; }
 
-        public MainWindow()
+        public MainWindow(string token)                    //принимает токен
         {
+            Token = token;
             InitializeComponent();
-
-            client = new TelegramMessageClient(this);
-
-            logList.ItemsSource = client.BotMessageLog; //client.BotMessageLog;
+            client = new TelegramMessageClient(this,Token); //передает окно и токен клиенту
+            logList.ItemsSource = client.BotMessageLog; 
         }
+
+       
 
         private void btnMsgSendClick(object sender, RoutedEventArgs e)
         {
