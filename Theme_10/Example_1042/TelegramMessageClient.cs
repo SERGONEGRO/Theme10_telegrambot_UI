@@ -17,6 +17,12 @@ namespace Theme10_TelegramBot_UI
         //static DirectoryInfo directoryInfo = new DirectoryInfo(path);
         //static bool flag = false;   //flag = true, если ожидается ответ пользователя
 
+
+        /// <summary>
+        /// Слушатель сообщений
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MessageListener(object sender, MessageEventArgs e)
         {
             var message = e.Message;                                             //полученное сообщение
@@ -35,6 +41,11 @@ namespace Theme10_TelegramBot_UI
             });
         }
 
+        /// <summary>
+        /// Клиент, принимающий окно и токен
+        /// </summary>
+        /// <param name="W"></param>
+        /// <param name="pathToken"></param>
         public TelegramMessageClient(MainWindow W, string pathToken) 
         {
             this.BotMessageLog = new ObservableCollection<MessageLog>();
@@ -49,6 +60,11 @@ namespace Theme10_TelegramBot_UI
             bot.StartReceiving();
         }
 
+        /// <summary>
+        /// отправка сообщений
+        /// </summary>
+        /// <param name="Text"></param>
+        /// <param name="Id"></param>
         public void SendMessage(string Text, string Id)
         {
             long id = Convert.ToInt64(Id);

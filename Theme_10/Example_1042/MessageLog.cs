@@ -13,6 +13,13 @@ namespace Theme10_TelegramBot_UI
 
         public string FirstName { get; set; }
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="Time"></param>
+        /// <param name="Msg"></param>
+        /// <param name="FirstName"></param>
+        /// <param name="Id"></param>
         public MessageLog(string Time, string Msg, string FirstName, long Id)
         {
             this.Time = Time;
@@ -21,6 +28,10 @@ namespace Theme10_TelegramBot_UI
             this.Id = Id;
         }
 
+        /// <summary>
+        /// Выгрузка лога сообщений в JSON
+        /// </summary>
+        /// <returns></returns>
         internal JObject SerializeMessageLogToJson()
         {
             JObject jMessageLog = new JObject
