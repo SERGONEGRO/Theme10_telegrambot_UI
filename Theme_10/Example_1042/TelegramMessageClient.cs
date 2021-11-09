@@ -13,8 +13,8 @@ namespace Theme10_TelegramBot_UI
         private MainWindow w;
         static TelegramBotClient bot;
         public ObservableCollection<MessageLog> BotMessageLog { get; set; }
-        static string path = @"D:\\bot\";
-        static DirectoryInfo directoryInfo = new DirectoryInfo(path);
+        //static string path = @"D:\\bot\";
+        //static DirectoryInfo directoryInfo = new DirectoryInfo(path);
         //static bool flag = false;   //flag = true, если ожидается ответ пользователя
 
         private void MessageListener(object sender, MessageEventArgs e)
